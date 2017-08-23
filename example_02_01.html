@@ -7,11 +7,14 @@
   
   <script type="text/javascript">
  	
- 		function arithmetic () {
+  	var a = +prompt("Введите меньшее число", ),
+  			b;
 
-			var a = +prompt("Введите меньшее число", ),
-					b = +prompt("Введите большее число", ),
-					sum = 0;
+ 		function arithmetic () {
+			
+			var sum = 0;
+
+			checkB();
 
 			for (var i = a+1; i < b; i++) {
 				sum = sum + i;
@@ -20,10 +23,23 @@
 				}
 			}
 
-
 			alert(sum);
 		}
 		
+		function checkB() {
+			var cycle = 1;
+
+			b = +prompt("Введите большее число", );
+
+			while (cycle) {
+			 	if (a >= b) {
+				  b = +prompt("Введите большее число", );
+			 	} else {
+			 		cycle = 0;
+			 	}
+			}
+		}
+
 		arithmetic();
  
   </script>

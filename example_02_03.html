@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <title>example</title>
+  
+  <script type="text/javascript">
+ 	
+    function drawRectange(x, y) {												// прямоугольник
+    
+    	for (var row = 0; row < x; row++) {
+    		for (var col = 0; col < y; col++) {
+    			document.write("O");
+    		}
+    		document.write("<br>");
+    	}
+    	document.write("<br>");
+    }
+
+
+    function rightTriangle (x) {												// прямоугольный треугольник
+    
+    	for (var row = 0; row < x; row++) {
+    		for (var col = 0; col <= row; col++) {
+    			document.write("A");
+    		}
+    		document.write("<br>");
+    	}
+    	document.write("<br>");
+    }
+
+
+    function equilateralTriangle (x) {									// равносторонний треугольник
+    
+    	var middle = Math.ceil(x / 2);
+
+    	for (var row = 0; row <= middle; row++) {
+    		for (var col = 0; col <= x; col++) {
+    			if (col < middle - row + 1 || col > middle + row - 1) {
+    				document.write("&nbsp" + "&nbsp" + "&nbsp");
+    			} else {
+    				document.write("A");
+    				
+    			}
+    		}
+    		document.write("<br>");
+    	}
+    	document.write("<br>");
+    }
+
+ 	 	function rhombus (x) {									// ромб
+    
+    	var middle = Math.ceil(x / 2),																//вычисляем середину
+    			botton = x - middle;																			// узнаем нижную часть
+
+
+    	for (var row = 0; row <= middle; row++) {											// строим верхнюю часть
+    		for (var col = 0; col <= x; col++) {
+    			if (col < middle - row + 1 || col > middle + row - 1) {
+    				document.write("&nbsp" + "&nbsp" + "&nbsp");
+    			} else {
+    				document.write("A");		
+    			}
+    		}
+    		document.write("<br>");
+    	}
+
+			for (row = 2; row + botton <= x; row++) {
+    		for (col = 0; col <= x; col++) {
+    			if (col < row + botton - middle + 1 || col > botton + middle - row + 1) {
+    				document.write("&nbsp" + "&nbsp" + "&nbsp");
+    			} else {
+    				document.write("A");		
+    			}
+    		}
+    		document.write("<br>");
+    	}
+    	document.write("<br>");
+    }
+   
+
+
+		drawRectange(5,20);
+		rightTriangle(15);
+		equilateralTriangle(25);
+		rhombus(25);
+
+  </script>
+
+</head>
+
+<body>
+ 
+</body>
+
+</html>
