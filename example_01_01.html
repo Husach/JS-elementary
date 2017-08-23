@@ -6,9 +6,51 @@
   <title>example</title>
   
   <script type="text/javascript">
- 		  
- 
+ 	
+ 		var variant;
 
+ 		function arithmetic () {
+
+		 	var x = prompt("Введите х", 0),
+		 			y = prompt("Введите y", 0),
+		 			z = prompt("Введите z", 0),
+		 			result;
+		 	
+			checkVariant();
+			
+		 	switch (variant) {
+		 		case '1' :
+		 			result = x + y + z;
+					break;
+				case '2' :
+		 			result = x - y - z;
+					break;
+				case '3' :
+		 			result = x * y * z;
+					break;
+				case '4' :
+		 			result = x / y / z;
+					break;
+		 	}
+		 	alert(result);
+		}
+		
+		function checkVariant() {
+			var cycle = 1;
+
+			variant = prompt("Выберите действие: 1(+), 2(-), 3(*), 4(/)");
+
+			while (cycle) {
+			 	if (variant != 1 && variant != 2 && variant != 3 && variant != 4) {
+				  variant = prompt("Выберите действие: 1(+), 2(-), 3(*), 4(/)");
+			 	} else {
+			 		cycle = 0;
+			 	}
+			}
+		}
+
+		arithmetic();
+ 
   </script>
 
 </head>
