@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <title>example</title>
+  
+  <script type="text/javascript">
+ 	
+    var array = new Array(5);
+
+    array[0] = new Array(-2, -4, 2, 3, 6);
+    array[1] = new Array(3, 4, 3, 3, 8);
+    array[2] = new Array(5, 7, -9, -5, 2);
+    array[3] = new Array(4, 9, 2, -9, 6);
+    array[4] = new Array(1, 1, 9, -4, -6);
+      
+    for (var row = 0; row < array.length; row++) {
+      for (var col = 0; col < array[row].length; col++) {
+        if (row == col && array[row][col] < 0) {
+          array[row][col] = 0;
+        } else if (row == col && array[row][col] > 0) {
+          array[row][col] = 1;
+        }
+        document.write(array[row][col] + "&nbsp" + "&nbsp");
+      }
+      document.write("<br>");
+    }
+
+
+
+  </script>
+
+</head>
+
+<body>
+ 
+</body>
+
+</html>
+

@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <title>example</title>
+  
+  <script type="text/javascript">
+ 	
+    var array = [1, 4, 6, 9, 4, 0, 2, -9, -5, 12, 29, 125, 235],
+        min = array[0],
+        max = array[0],
+        sum = 0,
+        average;
+
+    for (var i = 0; i < array.length; i++) {
+      
+      sum += array[i];
+
+      if (array[i] < min) {
+        min = array[i];
+      } else if (array[i] > max) {
+        max = array[i];
+      }
+
+      if (array[i] % 2) {
+        document.write(array[i] + "<br>");
+      }
+    }
+
+    average = sum / array.length;
+
+    document.write("Минимальное значение = " + min + "<br>");
+    document.write("Максимальное значение = " + max + "<br>");
+    document.write("Сумма значение = " + sum + "<br>");
+    document.write("Среднее арифметическое значение массива = " + average + "<br>");
+
+  </script>
+
+</head>
+
+<body>
+ 
+</body>
+
+</html>
+
