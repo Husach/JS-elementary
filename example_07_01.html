@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <title>example</title>
+  
+  <script type="text/javascript">
+ 	
+    function calc(act, a, b) {
+      if (isNaN(a) || isNaN(b)) {
+        document.write();
+      } else {
+        var result = act(a, b);
+        alert(result);  
+      }
+    }
+
+    var MathFrameWork = {};
+
+      MathFrameWork.a = +prompt("Введите первое число", ),
+      MathFrameWork.what = prompt("Выберите действие +, -, *, /", ),
+      MathFrameWork.b = +prompt("Введите второе число", ),
+      MathFrameWork.result;
+      MathFrameWork.calc = function (what) {
+        switch (what) {
+          case '+':
+            {
+              MathFrameWork.result = a + b;
+              break;
+            }
+          case '-':
+            {
+              MathFrameWork.result = a - b;
+              break;
+            }
+          case '*':
+            {
+              MathFrameWork.result = a * b;
+              break;
+            }
+          case '/':
+            {
+              if (b !=0) {
+                MathFrameWork.result = a / b;
+            } else {
+                alert("Error");
+            }
+              break;
+            }
+        }
+      }
+    
+    document.write(MathFrameWork.result);
+
+  </script>
+
+</head>
+
+<body>
+ 
+</body>
+
+</html>
+

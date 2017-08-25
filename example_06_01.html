@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <title>example</title>
+  
+  <script type="text/javascript">
+ 	
+    function add(a, b) {
+      return a + b;
+    }
+
+    function sub(a, b) {
+      return a - b;
+    }
+   
+    function mul(a, b) {
+      return a * b;
+    }
+
+    function div(a, b) {
+      return a / b;
+    }
+
+    function calc(act, a, b) {
+      if (isNaN(a) || isNaN(b)) {
+        document.write("Ваша переменная Nan");
+      } else {
+        var result = act(a, b);
+        alert(result);  
+      }
+    }
+
+    var a = +prompt("Введите первое число", ),
+        what = prompt("Выберите действие +, -, *, /", ),
+        b = +prompt("Введите второе число", );
+        
+      switch (what) {
+        case '+':
+          {
+            calc(add, a, b);
+            break;
+          }
+        case '-':
+          {
+            calc(sub, a, b);
+            break;
+          }
+        case '*':
+          {
+            calc(mul, a, b);
+            break;
+          }
+        case '/':
+          {
+            if (b !=0) {
+              calc(div, a, b);
+            } else {
+              alert("Error");
+            }
+            break;
+          }
+      }
+    
+  </script>
+
+</head>
+
+<body>
+ 
+</body>
+
+</html>
+

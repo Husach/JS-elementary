@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <title>example</title>
+  
+  <script type="text/javascript">
+ 	
+  var doc = {
+
+      title: "Name", 
+      body: "Content", 
+      footer: "served", 
+      date: "current",
+
+      app: {title: "Name", body: "Content", footer: "served", date: "current"},
+
+      edit: function () {
+        doc.app.title = prompt("Введите заголовок приложения");
+        doc.app.body = prompt("Введите тело приложения");
+        doc.app.footer = prompt("Введите футер приложения");
+        doc.app.date = prompt("Введите дату приложения");
+      },
+
+      write: function () {
+        document.write(doc.app.title + "<br>");
+        document.write(doc.app.body + "<br>");
+        document.write(doc.app.footer + "<br>");
+        document.write(doc.app.date + "<br>");        
+      },
+
+      writeOriginal: function () {
+        document.write(doc.title + "<br>");
+        document.write(doc.body + "<br>");
+        document.write(doc.footer + "<br>");
+        document.write(doc.date + "<br>");        
+      }
+
+    };
+
+    doc.edit();
+    doc.write();
+    doc.writeOriginal();
+
+  </script>
+
+</head>
+
+<body>
+ 
+</body>
+
+</html>
+
