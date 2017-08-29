@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <title>example</title>
+  
+  <script type="text/javascript">
+ 	
+     function Human(name, age){
+            this.Name = name;
+            this.Age = age;
+        }
+
+        Human.prototype.move = function(){
+            document.write(this.Name + " going somewhere.<br/>");
+        }
+        Human.prototype.talk = function(human){
+            document.write(this.Name + " speaks with "+ human.Name +".<br/>");
+        }
+
+        // Переопределние метода toString()
+        Human.prototype.toString = function (){
+            return "Name: "+this.Name +"; Age: "+this.Age+"; Nation: "+this.Nation+ ";<br/>";
+        }
+
+        Human.nationality = function(whereFrom){
+            switch (whereFrom){
+                case "asia": return "Asian"; break;
+                case "europe": return "Europian"; break;
+                case "arabic": return "Arabic"; break;
+                case "america": return "American"; break;
+                case "africa": return "African"; break;
+                default: return "Undefiend"; break;
+            }
+        }
+
+        var Alex = new Human("Alex", 36);
+        var Svetlana = new Human("Svetlana", 33);
+
+        Alex.Nation = Human.nationality("america");
+        Svetlana.Nation = Human.nationality("europe");
+
+        document.write(Alex);
+        document.write(Svetlana);
+        Alex.move();
+        Alex.talk(Svetlana);
+
+  </script>
+
+</head>
+
+<body>
+ 
+</body>
+
+</html>
