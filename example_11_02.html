@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <title>example</title>
+  
+  <script type="text/javascript">
+ 	
+    function Human(name, age) {
+      this.name = name;
+      this.age = age;
+    }
+
+    Human.prototype.toString = function (){
+      return "[Name: "+this.name +"; Age: "+this.age + "] ";
+    }
+
+    var humans = [new Human("Andrew",42), new Human("Elena",25), new Human("Alex",36), new Human("Michael",22), new Human("Anastasia",29)];
+
+    document.write(humans + "<br>");
+
+    humans.sort();
+
+    document.write(humans + "<br>");
+
+    humans.sort(function (n,m){
+      var f = n.age;
+      var s = m.age;
+      if (f < s) {
+        return -1;
+      }
+      else if (f > s) {
+        return 1;
+      }
+      else {
+        return 0;
+      }
+    });
+  
+    document.write(humans + "<br>");
+
+  </script>
+
+</head>
+
+<body>
+ 
+</body>
+
+</html>
