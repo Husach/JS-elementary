@@ -1,0 +1,45 @@
+<!DOCTYPE>
+
+<head>
+  <title>setInterval</title>
+  <script type="text/javascript">
+    window.onload = function () {  
+      var sec = 0,
+          min = 0,
+          hours = 0,
+          output = document.getElementById("output");
+
+      function timer() {
+        sec++;
+
+        if (sec > 59) {
+          sec = 0;
+          min++;
+          if (min > 59) {
+            min = 0;
+            hours++;
+          }
+        }
+
+        output.innerHTML = hours.toString() + ":" + min.toString() + ":" + sec.toString();
+      }
+
+      setInterval(timer, 10);
+    }
+
+    var get = function (id) {
+      return document.getElementById(id);
+    }
+
+  </script>
+</head>
+<body>
+    <p id="output">00:00:00</p>
+    <input id="startButton" type="button" value="Start" />
+    <input id="stopButton" type="button" value="Stop" />
+    <input id="resetButton" type="button" value="Reset" />
+</body>
+</html>
+
+
+
