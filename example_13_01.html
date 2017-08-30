@@ -1,29 +1,15 @@
 <!DOCTYPE>
 
 <head>
+  <title>setInterval</title>
 
-  <title>Home work</title>
-  <meta charset="UTF-8"/>
-  
-  <script type="text/javascript">
-    
-  window.onload = function () {
-
-    setTimeout(function () {
-      var p = document.createElement("p");
-      p.innerHTML = "lorem ipsum";
-      document.body.appendChild(p);    
-    }, 2000);
-
-  }
-
-  </script>
- 
+  <script type="text/javascript" src="example_13_01.js"></script>
 
 </head>
-
 <body>
-  
-
+    <p id="output">00:00:00</p>
+    <input id="startButton" type="button" value="Start" />
+    <input id="stopButton" type="button" value="Stop" />
+    <input id="resetButton" type="button" value="Reset" />
 </body>
 </html>
