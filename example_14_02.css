@@ -1,0 +1,44 @@
+body {
+	margin: 0;
+}
+
+div {
+	width: 300px;
+	min-height: 200px;
+	background: grey;
+	margin: 0 auto;
+	margin-top: 10%;
+	padding: 0;
+	border: 2px solid black;
+}
+
+input {
+	display: block;
+	margin: 0 auto;
+	margin-top: 30px;
+}
+
+input[type="checkbox"] {
+	display: inline;
+}
+
+input[type="button"] {
+	margin-top: 20px;
+}
+
+p {
+	font-size: 16px;
+	text-decoration: underline;
+	text-align: center;
+	margin: 0;
+}
+
+.loginError {
+	visibility: hidden;
+	background: red;
+}
+
+.loginOk {
+	visibility: hidden;
+	background: green;
+}
