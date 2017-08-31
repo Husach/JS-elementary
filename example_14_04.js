@@ -1,24 +1,50 @@
 window.onload = function () {  
 
-	var x = window.innerWidth,
-			y = window.innerHeight,
-			div = document.getElementsByTagName("div"),
-			input = document.getElementsByTagName("input");
+	var x = 0,
+			y = 0,
+			timer,
+			div = document.getElementById("div");
 
-	input.onclick = function () {
-
-		switch (get(id))
-
-
-
-		div[i].style.top = getRandom(1, y-500) + "px";
-		div[i].style.left = getRandom(1, x-200) + "px";
-
-
+	get("up").onclick = function () {
+			timer = setInterval (function (){
+			y -=1;
+			div.style.top = y + "px";
+			check(y);
+		}, 10)
 	}
+	get("down").onclick = function () {
+		timer = setInterval (function (){
+			y +=1;
+			div.style.top = y + "px";
+			check(y);
+		}, 10)
+	}
+	get("left").onclick = function () {
+		timer = setInterval (function (){
+			x -=1;
+			div.style.left = x + "px";
+			check(x);
+		}, 10)
+	}	
+	get("right").onclick = function () {
+		timer = setInterval (function (){
+			x +=1;
+			div.style.left = x + "px";
+			check(x);
+		}, 10)
+	}	
+
+
+	function check(data) {
+		if (data % 100 == false) {
+			return clearInterval(timer);
+		}
+	}
+
 
 }
 
 var get = function (id) {
 	return document.getElementById(id);
 }
+
