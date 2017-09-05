@@ -1,0 +1,42 @@
+<!DOCTYPE>
+
+<head>
+  <title>link</title>
+  <meta charset="UTF-8">
+
+  <script type="text/javascript" src="example_17_01.js"></script>
+  
+  </head>
+<body>
+	
+  <form action="" name="orderForm">
+    
+    <select id="basis" name="basis" required="required">
+      <option value="50">Big - 50</option>
+      <option value="40">Middle - 40</option>
+      <option value="30">Little - 30</option>
+    </select>  <br>  <br>
+
+    <input type="checkbox" name="ingredients" value="mashrooms">Грибы - 10 <br>
+    <input type="checkbox" name="ingredients" value="bekon">Бекон - 15 <br>
+    <input type="checkbox" name="ingredients" value="tomato">Помидор - 5 <br>
+    <input type="checkbox" name="ingredients" value="cheese">Сыр - 12 <br>
+    <input type="checkbox" name="ingredients" value="olive">Оливки - 7 <br>  <br>  
+    <div id="total"></div> <br>
+
+    <label for="name">Имя</label>
+    <input id="name" type="text" name="name" required="required"> <br> <br>
+
+    <label for="phone">Контактный телефон</label>
+    <input id="phone" type="text" name="phone" required="required" pattern="\d{3}-\d{2}-\d{2}" title="000-00-00" value=""> <br> <br>
+
+    <label for="address">Адрес доставки</label>
+    <input id="address" type="text" name="address" required="required"> <br> <br>
+
+    <input type="submit" name="" value="submit">
+
+  </form>
+
+</body>
+</html>
+
