@@ -30,10 +30,8 @@ window.addEventListener('load', init, false);
 						case "cheese": cost = 12; break;
 						case "olive": cost = 7; break;
 					}
-
 					check(e, cost);
 					result();
-
 				})
 			}
 
