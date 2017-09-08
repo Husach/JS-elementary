@@ -1,36 +1,16 @@
 window.onload = function () {
 
-	var size = document.getElementById('size'),
-			color = document.getElementById('color'),
-			p = document.getElementById('output'),
-			btn = document.getElementById('btn');
-	
-	update();
+	var p = document.getElementById("output");
 
-	color.addEventListener('change', newColor)
-	size.addEventListener('blur', newSize)
+	function change() {
 
-	function newColor() {
-		window.localStorage.bgcolor = color.value;
+		var arr = p.split('');
+
+		alert(arr[0]);
+		alert(arr[2]);
 	}
 
-	function newSize() {
-		if (parseInt(size.value) != "") {
-			window.localStorage.size = parseInt(size.value);
-		}
-	}
 
-	btn.addEventListener('click', update, false);
+	change();
 
-	function update() {
-		document.body.style.backgroundColor = window.localStorage.bgcolor;
-		p.style.fontSize = window.localStorage.size + 'px';
-	}
-
-	window.addEventListener('beforeunloan', close)
-
-	function close() {
-		newColor();
-		newSize();
-	}
 }

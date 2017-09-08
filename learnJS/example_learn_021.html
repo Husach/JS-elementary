@@ -1,0 +1,41 @@
+<!DOCTYPE>
+
+<head>
+  <title>learn JS</title>
+  <meta charset="UTF-8">
+
+  <script type="text/javascript">
+    
+  window.onload = function () {
+
+    function ucFirst(name) {
+    
+      var newName = '';
+
+     /* for (var i = 0; i < name.length; i++) {
+        if (i == 0) {
+          newName += name[i].toUpperCase();
+        } else {
+          newName += name[i];  
+        }
+      }*/
+
+      newName = name[0].toUpperCase() + name.slice(1);
+
+      alert(newName);
+
+    }
+
+    ucFirst(prompt("What is your name?"));
+
+  }
+
+  </script>
+  
+  </head>
+
+<body>
+
+</body>
+
+</html>

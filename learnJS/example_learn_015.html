@@ -1,0 +1,40 @@
+<!DOCTYPE>
+
+<head>
+  <title>learn JS</title>
+  <meta charset="UTF-8">
+
+  <script type="text/javascript">
+    
+  window.onload = function () {
+
+  	function sumTo(x) {
+
+  		if (x == 1) return 1;
+  		return x + sumTo(x - 1);
+  	}
+
+  	alert (sumTo(100));
+
+  }
+
+  </script>
+  
+  </head>
+<body>
+
+</body>
+</html>
+
+
+<!-- 
+  	function sumTo(x) {
+
+  		var sum = 0;
+  		for (var i = 0; i <= x; i++) { 			
+  			sum += i;
+  		}
+
+  		alert(sum);
+
+  	} -->

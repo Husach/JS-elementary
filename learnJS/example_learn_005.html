@@ -1,0 +1,39 @@
+<!DOCTYPE>
+
+<head>
+  <title>learn JS</title>
+  <meta charset="UTF-8">
+
+  <script type="text/javascript">
+    
+  window.onload = function () {
+
+  	var login = prompt("What are your login");
+
+  	if (login == "admin") {  		
+  		var pass = prompt("What are your password");
+
+  		if (pass == "black") {
+  			alert ("Добро пожаловать!");
+  		} else if (pass == null) {
+  			alert ("Вход отменён");
+  		} else {
+  			alert ("Пароль неверен");
+  		}
+
+  	} else if (login == null) {
+  		alert("Вход отменён");
+  	} else {
+  		alert("Я вас не знаю");
+  	}
+
+  }
+
+  </script>
+  
+  </head>
+<body>
+
+
+</body>
+</html>
