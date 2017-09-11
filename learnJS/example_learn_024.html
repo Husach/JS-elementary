@@ -1,0 +1,34 @@
+<!DOCTYPE>
+
+<head>
+  <title>learn JS</title>
+  <meta charset="UTF-8">
+
+  <script type="text/javascript">
+    
+  window.onload = function () {
+
+    function extractCurrencyValue(str) {
+
+    var num = !isNaN(parseFloat(str[1])) && isFinite(str[1]);
+    
+      if (str[0].slice(0, 1) == '$' && num == true) {
+        alert(str.slice(1));
+      }
+
+    }
+
+    extractCurrencyValue("$120");
+    extractCurrencyValue("$220s");
+    
+  }
+
+  </script>
+  
+  </head>
+
+<body>
+
+</body>
+
+</html>

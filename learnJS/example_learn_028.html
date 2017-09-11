@@ -1,0 +1,42 @@
+<!DOCTYPE>
+
+<head>
+  <title>learn JS</title>
+  <meta charset="UTF-8">
+
+  <script type="text/javascript">
+    
+  window.onload = function () {
+  
+    var menu = {
+      width: 200,
+      height: 300,
+      title: "My menu"
+    };
+
+    function isNumeric(n) {
+      return !isNaN(parseFloat(n)) && isFinite(n)
+    }
+
+    function multiplyNumeric (obj) {
+      for (var name in obj) {
+        if (isNumeric(obj[name])) {
+          obj[name] *= 2;
+        }
+        alert("Свойство " + name + " значение " + obj[name]);
+      }
+    } 
+
+    multiplyNumeric (menu);
+    
+  }
+
+  </script>
+  
+  </head>
+
+<body>
+
+</body>
+
+</html>

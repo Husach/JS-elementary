@@ -1,0 +1,36 @@
+<!DOCTYPE>
+
+<head>
+  <title>learn JS</title>
+  <meta charset="UTF-8">
+
+  <script type="text/javascript">
+    
+  window.onload = function () {
+
+    function truncate(str, maxlength) {
+    
+      var dif = maxlength - str.length;
+      var x = dif - 3;
+
+      if (dif < 0) {
+        return str.slice(0, x) + "...";
+      } else {
+        return str;
+      }
+
+    }
+
+    alert(truncate("Вот, что мне хотелось бы сказать на эту тему:", 60));
+    
+  }
+
+  </script>
+  
+  </head>
+
+<body>
+
+</body>
+
+</html>

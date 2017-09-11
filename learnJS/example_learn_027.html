@@ -1,0 +1,39 @@
+<!DOCTYPE>
+
+<head>
+  <title>learn JS</title>
+  <meta charset="UTF-8">
+
+  <script type="text/javascript">
+    
+  window.onload = function () {
+  
+    var salaries = {
+      "Вася": 100,
+      "Петя": 300,
+      "Даша": 250
+    };
+
+    var maxName,
+        max = 0;
+
+    for (var name in salaries) {
+      if (salaries[name] > max) {
+        max = salaries[name];
+        maxName = name;
+      }
+    }
+
+    alert (maxName || "aren't worker");
+    
+  }
+
+  </script>
+  
+  </head>
+
+<body>
+
+</body>
+
+</html>
