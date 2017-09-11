@@ -1,0 +1,48 @@
+<!DOCTYPE>
+
+<head>
+  <title>learn JS</title>
+  <meta charset="UTF-8">
+
+  <script type="text/javascript">
+    
+  window.onload = function () {
+  
+    var arr = [],
+        flag = false,
+        result = 0,
+        x;
+
+    do {
+      x = prompt("Number ?");
+
+      if (isNumeric(x)) {
+        flag = true;
+        result += (+x);
+      } else if (x == '') {
+        flag = false;
+      } else if (x == null) {
+        flag = false;
+      } else {
+        flag = false;
+      }
+
+    } while (flag);
+
+    function isNumeric(n) {
+      return !isNaN(parseFloat(n)) && isFinite(n)
+    }
+
+    alert(result);
+
+  }
+
+  </script>
+  
+  </head>
+
+<body>
+
+</body>
+
+</html>

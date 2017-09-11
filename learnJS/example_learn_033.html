@@ -1,0 +1,46 @@
+<!DOCTYPE>
+
+<head>
+  <title>learn JS</title>
+  <meta charset="UTF-8">
+
+  <script type="text/javascript">
+    
+  window.onload = function () {
+  
+    var arr = [],
+        p = 2,
+        n = 99,
+        sum = 0;
+
+    for (var i = 0; i < n; i++) {
+      arr[i] = p + i;
+    }
+
+    alert(arr);
+
+    for (p; p*p < n + p; p++) {
+      for (var j = p * 2; j < n + p; j += p) {
+        arr[j-2] = 0;
+      }
+    }
+
+    alert(arr);
+
+    for (i = 0; i < n; i++) {
+      sum += arr[i];
+    }
+
+    alert(sum);
+
+  }
+
+  </script>
+  
+  </head>
+
+<body>
+
+</body>
+
+</html>

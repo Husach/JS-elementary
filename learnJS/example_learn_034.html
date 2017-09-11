@@ -1,0 +1,45 @@
+<!DOCTYPE>
+
+<head>
+  <title>learn JS</title>
+  <meta charset="UTF-8">
+
+  <script type="text/javascript">
+    
+  window.onload = function () {
+  
+    function getMaxSubSum (arr) {
+      
+      var sum = 0,
+          max = 0;
+
+      for (var first = 0; first < arr.length; first++) {
+        for (var last = first; last < arr.length; last++) {
+          sum += arr[last];         
+          max = Math.max(max, sum);
+        }
+        sum = 0;
+      }
+
+      alert(max);
+
+    }
+
+    getMaxSubSum([-1, 2, 3, -9]);
+    getMaxSubSum([2, -1, 2, 3, -9]);
+    getMaxSubSum([-1, 2, 3, -9, 11]);
+    getMaxSubSum([-2, -1, 1, 2]);
+    getMaxSubSum([100, -9, 2, -3, 5]);
+    getMaxSubSum([1, 2, 3]);
+
+  }
+
+  </script>
+  
+  </head>
+
+<body>
+
+</body>
+
+</html>

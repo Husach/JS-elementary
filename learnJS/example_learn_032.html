@@ -1,0 +1,38 @@
+<!DOCTYPE>
+
+<head>
+  <title>learn JS</title>
+  <meta charset="UTF-8">
+
+  <script type="text/javascript">
+    
+  window.onload = function () {
+  
+    var arr = [5, 4, 3, 8, 0],
+        newArr = [];
+
+
+    function filterRange(arr, a, b) {
+
+      for (var i = 0; i < arr.length; i++) {
+        if ( a >= arr[i] && arr[i] >= b) {
+          newArr.push(arr[i]);
+        }
+      }
+    }
+
+    filterRange(arr, 8, 4);
+
+    alert(newArr);
+
+  }
+
+  </script>
+  
+  </head>
+
+<body>
+
+</body>
+
+</html>
