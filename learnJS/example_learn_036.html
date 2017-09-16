@@ -1,0 +1,54 @@
+<!DOCTYPE>
+
+<head>
+  <title>learn JS</title>
+  <meta charset="UTF-8">
+
+  <script type="text/javascript">
+    
+  window.onload = function () {
+  
+    var obj = {
+      className: 'open menu'
+    }
+
+    function addClass (obj, cls) {
+
+      var arr = obj.className.split(' '),
+          flag = true;
+
+      for (var i = 0; i < arr.length; i++) {
+        if (arr[i] == cls) {
+          flag = false;
+          break;
+        }
+      }
+
+      if (flag) {
+        arr.push(cls);
+      }
+
+      obj.className = arr.join(" ");
+
+    }
+
+
+    addClass(obj, 'new'); // obj.className='open menu new'
+    addClass(obj, 'open'); // без изменений (класс уже существует)
+    addClass(obj, 'me'); // obj.className='open menu new me'
+
+    alert( obj.className ); // "open menu new me"
+
+
+
+  }
+
+  </script>
+  
+  </head>
+
+<body>
+
+</body>
+
+</html>

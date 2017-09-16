@@ -1,0 +1,48 @@
+<!DOCTYPE>
+
+<head>
+  <title>learn JS</title>
+  <meta charset="UTF-8">
+
+  <script type="text/javascript">
+    
+  window.onload = function () {
+  
+    var strings = ["кришна", "кришна", "харе", "харе", "харе", "харе", "кришна", "кришна", "8-()"];
+
+    function unique(arr) {
+ 
+      var obj = {};
+
+      for (var i = 0; i < arr.length; i++) {
+        var str = arr[i];
+        obj[str] = true; // запомнить строку в виде свойства объекта
+      }
+
+    return Object.keys(obj);
+
+     /* for (var first = 0; first < arr.length; first++) {
+        for (var second = first + 1; second < arr.length; second++) {
+          if (arr[first].localeCompare(arr[second]) == 0) {
+              arr.splice(second, 1);
+              second--;
+          }
+        }
+      }*/
+    /*alert(strings);*/
+
+    }
+
+    alert( unique(strings) ); // кришна, харе, 8-()
+    
+  }
+
+  </script>
+  
+  </head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE>
+
+<head>
+  <title>learn JS</title>
+  <meta charset="UTF-8">
+
+  <script type="text/javascript">
+    
+  window.onload = function () {
+  
+    var vasya = { name: "Вася", age: 23 };
+    var masha = { name: "Маша", age: 18 };
+    var andy = { name: "Andy", age: 2 };
+    var vovochka = { name: "Вовочка", age: 6 };
+
+    var people = [ vasya , masha , andy, vovochka ];
+
+    function compareNumeric(a, b) {
+      return a.age - b.age;
+    }
+
+    people.sort(compareNumeric);
+
+    alert("Наименьший возраст - " + people[0].age);
+
+    for (var i = 0; i < people.length; i++) {
+      alert(people[i].name);  
+    }
+    
+
+  }
+
+  </script>
+  
+  </head>
+
+<body>
+
+</body>
+
+</html>

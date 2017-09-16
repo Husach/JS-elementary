@@ -1,0 +1,47 @@
+<!DOCTYPE>
+
+<head>
+  <title>learn JS</title>
+  <meta charset="UTF-8">
+
+  <script type="text/javascript">
+    
+  window.onload = function () {
+  
+    var arr = ["воз", "киборг", "корсет", "ЗОВ", "гробик", "костер", "сектор"];
+
+    function sorted (str) {
+      return str.toLowerCase().split('').sort().join('');
+    }
+
+    function aclean (arr) {
+
+      for (var first = 0; first < arr.length; first++) {
+        for (var second = first + 1; second < arr.length; second++) {
+
+          var a = sorted(arr[first]),
+              b = sorted(arr[second]);
+
+          if (a === b) {
+            arr.splice(second, 1);
+            second--;
+          }
+        }
+      }
+
+      alert (arr);
+    }
+
+    aclean(arr); // "воз,киборг,корсет" или "ЗОВ,гробик,сектор"
+    
+  }
+
+  </script>
+  
+  </head>
+
+<body>
+
+</body>
+
+</html>

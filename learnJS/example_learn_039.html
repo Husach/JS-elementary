@@ -1,0 +1,39 @@
+<!DOCTYPE>
+
+<head>
+  <title>learn JS</title>
+  <meta charset="UTF-8">
+
+  <script type="text/javascript">
+    
+  window.onload = function () {
+  
+    arr = [5, 3, 8, 1];
+
+    function filterRangeInPlace (arr, a, b) {
+
+      for (var i = 0; i < arr.length; i++) {
+        if (a > arr[i] || arr[i] > b) {
+          arr.splice(i, 1);
+          i--;
+        }
+      }
+
+    }
+
+
+    filterRangeInPlace(arr, 1, 4); 
+
+    alert( arr ); 
+
+  }
+
+  </script>
+  
+  </head>
+
+<body>
+
+</body>
+
+</html>
