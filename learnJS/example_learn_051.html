@@ -1,0 +1,36 @@
+<!DOCTYPE>
+
+<head>
+  <title>learn JS</title>
+  <meta charset="UTF-8">
+
+  <script type="text/javascript">
+    
+  window.onload = function () {
+  
+    var arr = [1, 2, 3, 4, 5];
+
+    function GetSums(array) {     
+      var sumArr = [];
+
+      array.reduce(function(sum, current, i){
+        sumArr[i] = sum + current;
+        return sum + current;
+      }, 0);
+
+      alert(sumArr);
+    }
+
+    GetSums(arr);
+
+  }
+
+  </script>
+  
+  </head>
+
+<body>
+
+</body>
+
+</html>
