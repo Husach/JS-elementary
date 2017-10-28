@@ -1,0 +1,35 @@
+<!DOCTYPE>
+
+<head>
+  <title>learn JS</title>
+  <meta charset="UTF-8">
+
+  <script type="text/javascript">
+    
+  window.onload = function () {
+  
+    function getDateAgo(date, days) {
+     
+      var newDate = new Date(date);
+      newDate.setDate(date.getDate() - days);
+      alert (newDate.getDate());
+     
+    }
+
+    var date = new Date(2015, 0, 2);
+
+    getDateAgo(date, 1); // 1, (1 января 2015)
+    getDateAgo(date, 2); // 31, (31 декабря 2014)
+    getDateAgo(date, 365); // 2, (2 января 2014)
+
+  }
+
+  </script>
+  
+  </head>
+
+<body>
+
+</body>
+
+</html>
